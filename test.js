@@ -47,7 +47,7 @@ beforeEach(done => {
 /**
  * Run the test suite
  */
-describe('POST /tasks', () => {
+describe('API', () => {
 	const name = 'New todo';
 	const first = items[0];
 	const newName = 'Updated todo';
