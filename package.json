@@ -4,7 +4,7 @@
   "description": "REST API example using NodeJS, MongoDB and Express",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"mongodb\" \"nodemon server.js\""
+    "start": "concurrently \"mongod\" \"nodemon server.js\""
   },
   "keywords": ["NodeJS", "MongoDB", "Express", "REST", "API"],
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
