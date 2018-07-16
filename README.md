@@ -2,7 +2,7 @@
 
 An example rest api with NodeJS and MongoDB
 
-## Prequisite
+## Prerequisite
 
 This REST API example assumes that you have NodeJS and MongoDB installed.
 
