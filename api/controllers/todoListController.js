@@ -15,6 +15,10 @@ const deleteError = {
 	message: 'Task successfully deleted!'
 };
 
+const createError = {
+	message: 'Error: missing name!'
+};
+
 /**
  * Get all items
  */
@@ -26,6 +30,12 @@ exports.listALL = (req, res) =>
  */
 exports.create = (req, res) => {
 	const task = new Task(req.body);
+
+	if (!req.body.name) {
+		res.status(400);
+
+		return res.send(createError);
+	}
 
 	task.save((err, data) => (err ? res.send(err) : res.json(data)));
 };

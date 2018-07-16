@@ -39,3 +39,5 @@ routes(app);
  * Listen
  */
 app.listen(port);
+
+module.exports = app;

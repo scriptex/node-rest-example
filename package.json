@@ -4,15 +4,10 @@
   "description": "REST API example using NodeJS, MongoDB and Express",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"mongod\" \"nodemon server.js\""
+    "start": "concurrently \"mongod\" \"nodemon server.js\"",
+    "test": "mocha test.js --exit"
   },
-  "keywords": [
-    "NodeJS",
-    "MongoDB",
-    "Express",
-    "REST",
-    "API"
-  ],
+  "keywords": ["NodeJS", "MongoDB", "Express", "REST", "API"],
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
   "repository": "https://github.com/scriptex/node-rest-example",
   "bugs": {
@@ -21,12 +16,17 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^1.18.2"
+    "expect": "^23.4.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.2",
+    "supertest": "^3.1.0"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.0",
     "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "mongodb": "^3.1.1",
     "mongoose": "^5.2.3"
   },
   "private": true
