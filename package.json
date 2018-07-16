@@ -6,7 +6,13 @@
   "scripts": {
     "start": "concurrently \"mongod\" \"nodemon server.js\""
   },
-  "keywords": ["NodeJS", "MongoDB", "Express", "REST", "API"],
+  "keywords": [
+    "NodeJS",
+    "MongoDB",
+    "Express",
+    "REST",
+    "API"
+  ],
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
   "repository": "https://github.com/scriptex/node-rest-example",
   "bugs": {
@@ -15,11 +21,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^3.6.0",
     "nodemon": "^1.18.2"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "concurrently": "^3.6.0",
     "express": "^4.16.3",
     "mongoose": "^5.2.3"
   },
