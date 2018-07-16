@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/scriptex/node-rest-example.svg?branch=master)](https://travis-ci.org/scriptex/node-rest-example)
+
 # node-rest-example
 
 An example rest api with NodeJS and MongoDB
@@ -15,3 +17,4 @@ npm i # or yarn
 
 npm run start # or yarn start
 ```
+
