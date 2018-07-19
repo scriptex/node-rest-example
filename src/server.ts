@@ -1,7 +1,6 @@
 /**
  * External dependencies
  */
-import mongoose from 'mongoose';
 import { model, connect } from 'mongoose';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';

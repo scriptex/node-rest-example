@@ -1,4 +1,9 @@
 /**
+ * External dependencies
+ */
+import { Application } from 'express';
+
+/**
  * Internal dependenices
  */
 import {
@@ -12,7 +17,7 @@ import {
 /**
  * Application routes
  */
-export default app => {
+export default (app: Application): void => {
 	/**
 	 * GLobal routes
 	 */

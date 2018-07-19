@@ -29,13 +29,16 @@ const createError: Object = {
  * Get all items
  */
 const listALL = (req: Request, res: Response): any => {
-	Task.find({}, (err: Object, task: Object) => {
-		if (err) {
-			res.send(err);
-		} else {
-			res.json(task);
+	Task.find(
+		{},
+		(err: Object, task: Object): void => {
+			if (err) {
+				res.send(err);
+			} else {
+				res.json(task);
+			}
 		}
-	});
+	);
 };
 
 /**
@@ -50,26 +53,31 @@ const create = (req: Request, res: Response): any => {
 		return res.send(createError);
 	}
 
-	task.save((err: Object, data: Object) => {
-		if (err) {
-			res.send(err);
-		} else {
-			res.json(task);
+	task.save(
+		(err: Object, data: Object): void => {
+			if (err) {
+				res.send(err);
+			} else {
+				res.json(task);
+			}
 		}
-	});
+	);
 };
 
 /**
  * Read an item
  */
 const read = (req: Request, res: Response): void => {
-	Task.findById(req.params.taskId, (err: Object, task: Object) => {
-		if (err) {
-			res.send(err);
-		} else {
-			res.json(task);
+	Task.findById(
+		req.params.taskId,
+		(err: Object, task: Object): void => {
+			if (err) {
+				res.send(err);
+			} else {
+				res.json(task);
+			}
 		}
-	});
+	);
 };
 
 /**
@@ -82,7 +90,7 @@ const update = (req: Request, res: Response): void => {
 		{ _id },
 		req.body,
 		{ new: true },
-		(err: Object, task: Object) => {
+		(err: Object, task: Object): void => {
 			if (err) {
 				res.send(err);
 			} else {
@@ -98,13 +106,16 @@ const update = (req: Request, res: Response): void => {
 const remove = (req: Request, res: Response): void => {
 	const _id = req.params.taskId;
 
-	Task.remove({ _id }, (err: Object, task: Object) => {
-		if (err) {
-			res.send(err);
-		} else {
-			res.json(task);
+	Task.remove(
+		{ _id },
+		(err: Object): void => {
+			if (err) {
+				res.send(err);
+			} else {
+				res.json({ _id });
+			}
 		}
-	});
+	);
 };
 
 export { listALL, create, read, update, remove };

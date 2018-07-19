@@ -2,8 +2,9 @@
  * External dependencies
  */
 import { model } from 'mongoose';
-import { ObjectId } from 'mongodb';
+import { ObjectId, ObjectID } from 'mongodb';
 import { beforeEach, describe, it } from 'mocha';
+import { Request, Response } from 'express';
 
 const expect = require('expect');
 const request = require('supertest');
@@ -13,6 +14,21 @@ const request = require('supertest');
  */
 import app from './server';
 import TaskSchema from '../api/models/todoListModel';
+
+interface Todo {
+	_id: ObjectID;
+	name: string;
+	Created_date: number;
+	status: string;
+}
+
+interface Todos extends Array<Todo> {
+	body: Array<Todo>;
+}
+
+interface TodoResponse extends Response {
+	body: Todo;
+}
 
 /**
  * Create the DB model
@@ -54,75 +70,112 @@ describe('API', () => {
 	const first = items[0];
 	const newName: string = 'Updated todo';
 
-	it('should list all todos', (done): void => {
+	it('should list all todos', (done: Function): void => {
 		request(app)
 			.get('/tasks')
 			.send()
 			.expect(200)
-			.expect(res => expect(res.body.length).toBe(items.length))
-			.end((err, res) => (err ? done(err) : done()));
+			.expect(
+				(res: Todos): void => {
+					expect(res.body.length).toBe(items.length);
+				}
+			)
+			.end(
+				(err: Object, res: TodoResponse): void => {
+					if (err) {
+						done(err);
+					} else {
+						done();
+					}
+				}
+			);
 	});
 
-	it('should create a new todo', (done): void => {
+	it('should create a new todo', (done: Function): void => {
 		request(app)
 			.post('/tasks')
 			.send({ name })
 			.expect(200)
-			.expect(res => expect(res.body.name).toBe(name))
-			.end((err, res) => {
-				if (err) {
-					return done(err);
+			.expect(
+				(res): void => {
+					expect(res.body.name).toBe(name);
 				}
+			)
+			.end(
+				(err: Object, res: TodoResponse): void => {
+					if (err) {
+						return done(err);
+					}
 
-				Tasks.find({ name })
-					.then(todos => {
-						expect(todos.length).toBe(1);
-						expect(todos[0].name).toBe(name);
-						done();
-					})
-					.catch(e => done(e));
-			});
+					Tasks.find(
+						{ name },
+						(err, todos: Todos): void => {
+							if (err) {
+								done(err);
+							} else {
+								expect(todos.length).toBe(1);
+								expect(todos[0].name).toBe(name);
+								done();
+							}
+						}
+					);
+				}
+			);
 	});
 
-	it('should not create a new todo if invalid body is supplied', (done): void => {
+	it('should not create a new todo if invalid body is supplied', (done: Function): void => {
 		request(app)
 			.post('/tasks')
 			.send({})
 			.expect(400)
-			.end((err, res) => {
-				if (err) {
-					return done(err);
-				}
+			.end(
+				(err: Object, res: TodoResponse): void => {
+					if (err) {
+						return done(err);
+					}
 
-				Tasks.find()
-					.then(todos => {
-						expect(todos.length).toBe(items.length);
-						done();
-					})
-					.catch(e => done(e));
-			});
+					Tasks.find(
+						(err, todos: Todos): void => {
+							if (err) {
+								done(err);
+							} else {
+								expect(todos.length).toBe(items.length);
+								done();
+							}
+						}
+					);
+				}
+			);
 	});
 
-	it('should read a todo', (done): void => {
+	it('should read a todo', (done: Function): void => {
 		request(app)
 			.get(`/tasks/${first._id.toHexString()}`)
 			.expect(200)
-			.expect(res => expect(res.body.name).toBe(first.name))
+			.expect(
+				(res: TodoResponse): void => {
+					expect(res.body.name).toBe(first.name);
+				}
+			)
 			.end(done);
 	});
 
-	it('should update a todo', (done): void => {
+	it('should update a todo', (done: Function): void => {
 		request(app)
 			.put(`/tasks/${first._id.toHexString()}`)
 			.send({
 				name: newName
 			})
 			.expect(200)
-			.expect(res => expect(res.body.name).toBe(newName))
+			.expect(
+				(res: TodoResponse): void => {
+					expect(res.body.name).toBe(newName);
+				}
+			)
 			.end(done);
 	});
 
-	it('should delete a todo', (done): void => {
+	it('should delete a todo', (done: Function): void => {
 		request(app)
 			.delete(`/tasks/${first._id.toHexString()}`)
 			.expect(200)
