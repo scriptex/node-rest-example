@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-const { Schema } = require('mongoose');
+import { Schema } from 'mongoose';
 
 /**
  * Create the DB Schema
  */
-module.exports = new Schema({
+export default new Schema({
 	name: {
 		type: String,
 		required: 'Enter the name of the task'

@@ -4,8 +4,13 @@
   "description": "REST API example using NodeJS, MongoDB and Express",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"mongod\" \"nodemon server.js\"",
-    "test": "mocha test.js --exit"
+    "db": "mongod",
+    "dev": "concurrently \"yarn db\" \"ts-node ./src/server.ts\"",
+    "build": "tsc",
+    "start": "concurrently \"yarn db\" \"nodemon ./dist/server.js\"",
+    "prod": "yarn build && yarn start",
+    "mocha": "mocha --exit -r ts-node/register src/**/*.test.ts",
+    "test": "concurrently \"yarn db\" \"yarn mocha\""
   },
   "keywords": ["NodeJS", "MongoDB", "Express", "REST", "API"],
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
@@ -19,9 +24,12 @@
     "expect": "^23.4.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.2",
-    "supertest": "^3.1.0"
+    "supertest": "^3.1.0",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
+    "@types/express": "^4.16.0",
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.0",
     "express": "^4.16.3",

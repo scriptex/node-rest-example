@@ -1,21 +1,23 @@
 /**
  * External dependencies
  */
+import { model } from 'mongoose';
+import { ObjectId } from 'mongodb';
+import { beforeEach, describe, it } from 'mocha';
+
 const expect = require('expect');
 const request = require('supertest');
-const { ObjectId } = require('mongodb');
-const mongoose = require('mongoose');
 
 /**
  * Internal dependencies
  */
-const app = require('./server');
-const Model = require('./api/models/todoListModel.js');
+import app from './server';
+import TaskSchema from '../api/models/todoListModel';
 
 /**
  * Create the DB model
  */
-const Tasks = mongoose.model('Tasks', Model);
+const Tasks = model('Tasks', TaskSchema);
 
 /**
  * Mock data
@@ -40,17 +42,17 @@ const items = [
  */
 beforeEach(done => {
 	Tasks.remove({})
-		.then(() => Tasks.insertMany(items))
-		.then(() => done());
+		.then((): any => Tasks.insertMany(items))
+		.then((): any => done());
 });
 
 /**
  * Run the test suite
  */
 describe('API', () => {
-	const name = 'New todo';
+	const name: string = 'New todo';
 	const first = items[0];
-	const newName = 'Updated todo';
+	const newName: string = 'Updated todo';
 
 	it('should list all todos', done => {
 		request(app)
