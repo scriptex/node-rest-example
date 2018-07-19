@@ -15,8 +15,15 @@ If not, install them and proceed.
 ```sh
 npm i # or yarn
 
-npm start # or yarn start
+# in a separate terminal window/tab run
+npm run db
+
+# in a separate terminal window/tab run
+npm dev # or yarn dev
 
 # Test
 npm test # or yarn test
+
+# Build
+npm run build # or yarn build
 ```
