@@ -15,6 +15,9 @@ If not, install them and proceed.
 ```sh
 npm i # or yarn
 
-npm run start # or yarn start
+npm start # or yarn start
+
+# Test
+npm test # or yarn test
 ```
 
