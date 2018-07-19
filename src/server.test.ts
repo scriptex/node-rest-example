@@ -135,7 +135,7 @@ describe('API', () => {
 					}
 
 					Tasks.find(
-						(err, todos: Todos): void => {
+						(err: any, todos: Todos): void => {
 							if (err) {
 								done(err);
 							} else {
