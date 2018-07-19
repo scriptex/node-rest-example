@@ -40,7 +40,7 @@ const items = [
 /**
  * Empty and then populate the DB
  */
-beforeEach(done => {
+beforeEach((done): void => {
 	Tasks.remove({})
 		.then((): any => Tasks.insertMany(items))
 		.then((): any => done());
@@ -54,7 +54,7 @@ describe('API', () => {
 	const first = items[0];
 	const newName: string = 'Updated todo';
 
-	it('should list all todos', done => {
+	it('should list all todos', (done): void => {
 		request(app)
 			.get('/tasks')
 			.send()
@@ -63,7 +63,7 @@ describe('API', () => {
 			.end((err, res) => (err ? done(err) : done()));
 	});
 
-	it('should create a new todo', done => {
+	it('should create a new todo', (done): void => {
 		request(app)
 			.post('/tasks')
 			.send({ name })
@@ -84,7 +84,7 @@ describe('API', () => {
 			});
 	});
 
-	it('should not create a new todo if invalid body is supplied', done => {
+	it('should not create a new todo if invalid body is supplied', (done): void => {
 		request(app)
 			.post('/tasks')
 			.send({})
@@ -103,7 +103,7 @@ describe('API', () => {
 			});
 	});
 
-	it('should read a todo', done => {
+	it('should read a todo', (done): void => {
 		request(app)
 			.get(`/tasks/${first._id.toHexString()}`)
 			.expect(200)
@@ -111,7 +111,7 @@ describe('API', () => {
 			.end(done);
 	});
 
-	it('should update a todo', done => {
+	it('should update a todo', (done): void => {
 		request(app)
 			.put(`/tasks/${first._id.toHexString()}`)
 			.send({
@@ -122,7 +122,7 @@ describe('API', () => {
 			.end(done);
 	});
 
-	it('should delete a todo', done => {
+	it('should delete a todo', (done): void => {
 		request(app)
 			.delete(`/tasks/${first._id.toHexString()}`)
 			.expect(200)
