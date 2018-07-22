@@ -53,8 +53,6 @@ exports.read = (req, res) =>
  * Update an item
  */
 exports.update = (req, res) => {
-	console.log(req.params.taskId);
-
 	Task.findOneAndUpdate(
 		{
 			_id: req.params.taskId
