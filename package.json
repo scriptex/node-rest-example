@@ -16,18 +16,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "expect": "^23.4.0",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.18.2",
-    "supertest": "^3.1.0"
+    "expect": "23.6.0",
+    "mocha": "5.2.0",
+    "nodemon": "1.18.4",
+    "supertest": "3.3.0"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "concurrently": "^4.0.0",
-    "express": "^4.16.3",
-    "lodash": "^4.17.10",
-    "mongodb": "^3.1.1",
-    "mongoose": "^5.2.3"
+    "body-parser": "1.18.3",
+    "concurrently": "4.0.1",
+    "express": "4.16.3",
+    "lodash": "4.17.11",
+    "mongodb": "3.1.6",
+    "mongoose": "5.2.15"
   },
   "private": true
 }
