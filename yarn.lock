@@ -1520,11 +1520,28 @@ mongodb-core@3.1.5:
   optionalDependencies:
     saslprep "^1.0.0"
 
+mongodb-core@3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.1.6.tgz#60a6d137b30ef8bb0675379b5215bee46aee0aae"
+  dependencies:
+    bson "^1.1.0"
+    require_optional "^1.0.1"
+    safe-buffer "^5.1.2"
+  optionalDependencies:
+    saslprep "^1.0.0"
+
 mongodb@3.1.6:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.6.tgz#6054641973b5bf5b5ae1c67dcbcf8fa88280273d"
   dependencies:
     mongodb-core "3.1.5"
+    safe-buffer "^5.1.2"
+
+mongodb@3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.7.tgz#2e89f41777c6ea49065d83126cdc9af9f7e9381a"
+  dependencies:
+    mongodb-core "3.1.6"
     safe-buffer "^5.1.2"
 
 mongoose-legacy-pluralize@1.0.2:
