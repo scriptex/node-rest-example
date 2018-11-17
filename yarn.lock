@@ -1484,9 +1484,9 @@ mongodb-core@3.1.7:
   optionalDependencies:
     saslprep "^1.0.0"
 
-mongodb-core@3.1.8:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.1.8.tgz#696cd5581c17d4f44f911b9cd089239e3e687b0e"
+mongodb-core@3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.1.9.tgz#c31ee407bf932b0149eaed775c17ee09974e4ca3"
   dependencies:
     bson "^1.1.0"
     require_optional "^1.0.1"
@@ -1494,18 +1494,18 @@ mongodb-core@3.1.8:
   optionalDependencies:
     saslprep "^1.0.0"
 
+mongodb@3.1.10:
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.10.tgz#45ad9b74ea376f4122d0881b75e5489b9e504ed7"
+  dependencies:
+    mongodb-core "3.1.9"
+    safe-buffer "^5.1.2"
+
 mongodb@3.1.8:
   version "3.1.8"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.8.tgz#df8084fda2efdbaddd05dfd6a269891fc4cc72df"
   dependencies:
     mongodb-core "3.1.7"
-    safe-buffer "^5.1.2"
-
-mongodb@3.1.9:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.9.tgz#9bd205b36b6ddf4bd1fb6c3c31641e1994b62075"
-  dependencies:
-    mongodb-core "3.1.8"
     safe-buffer "^5.1.2"
 
 mongoose-legacy-pluralize@1.0.2:
