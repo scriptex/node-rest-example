@@ -1441,9 +1441,9 @@ mocha@5.2.0:
     mkdirp "0.5.1"
     supports-color "5.4.0"
 
-mongodb-core@3.1.10:
-  version "3.1.10"
-  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.1.10.tgz#a9f4839f99b81fe415710f747bb8f016bbdc877d"
+mongodb-core@3.1.11:
+  version "3.1.11"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.1.11.tgz#b253038dbb4d7329f3d1c2ee5400bb0c9221fde5"
   dependencies:
     bson "^1.1.0"
     require_optional "^1.0.1"
@@ -1468,11 +1468,11 @@ mongodb@3.1.10:
     mongodb-core "3.1.9"
     safe-buffer "^5.1.2"
 
-mongodb@3.1.11:
-  version "3.1.11"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.11.tgz#c33792b25a86436ff79c52327939bac5f7d6a34e"
+mongodb@3.1.12:
+  version "3.1.12"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.12.tgz#8dddb9d8891c34a7437d855e2cb548390082db42"
   dependencies:
-    mongodb-core "3.1.10"
+    mongodb-core "3.1.11"
     safe-buffer "^5.1.2"
 
 mongoose-legacy-pluralize@1.0.2:
