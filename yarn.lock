@@ -1468,9 +1468,9 @@ mongodb@3.1.10:
     mongodb-core "3.1.9"
     safe-buffer "^5.1.2"
 
-mongodb@3.1.12:
-  version "3.1.12"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.12.tgz#8dddb9d8891c34a7437d855e2cb548390082db42"
+mongodb@3.1.13:
+  version "3.1.13"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.13.tgz#f8cdcbb36ad7a08b570bd1271c8525753f75f9f4"
   dependencies:
     mongodb-core "3.1.11"
     safe-buffer "^5.1.2"
