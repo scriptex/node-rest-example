@@ -677,14 +677,14 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   dependencies:
     homedir-polyfill "^1.0.1"
 
-expect@24.3.1:
-  version "24.3.1"
-  resolved "https://registry.yarnpkg.com/expect/-/expect-24.3.1.tgz#7c42507da231a91a8099d065bc8dc9322dc85fc0"
+expect@24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/expect/-/expect-24.4.0.tgz#df52da212bc06831c38fb51a53106ae7a0e7aaf2"
   dependencies:
     "@jest/types" "^24.3.0"
     ansi-styles "^3.2.0"
     jest-get-type "^24.3.0"
-    jest-matcher-utils "^24.3.1"
+    jest-matcher-utils "^24.4.0"
     jest-message-util "^24.3.0"
     jest-regex-util "^24.3.0"
 
@@ -1255,27 +1255,27 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
-jest-diff@^24.3.1:
-  version "24.3.1"
-  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-24.3.1.tgz#87952e5ea1548567da91df398fa7bf7977d3f96a"
+jest-diff@^24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-24.4.0.tgz#106cd0491cb32da31debbea3e21f094d358dc7d9"
   dependencies:
     chalk "^2.0.1"
     diff-sequences "^24.3.0"
     jest-get-type "^24.3.0"
-    pretty-format "^24.3.1"
+    pretty-format "^24.4.0"
 
 jest-get-type@^24.3.0:
   version "24.3.0"
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-24.3.0.tgz#582cfd1a4f91b5cdad1d43d2932f816d543c65da"
 
-jest-matcher-utils@^24.3.1:
-  version "24.3.1"
-  resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-24.3.1.tgz#025e1cd9c54a5fde68e74b12428775d06d123aa8"
+jest-matcher-utils@^24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-24.4.0.tgz#285a2a5c8414d2f4a62d89ddc4b381730e2b717d"
   dependencies:
     chalk "^2.0.1"
-    jest-diff "^24.3.1"
+    jest-diff "^24.4.0"
     jest-get-type "^24.3.0"
-    pretty-format "^24.3.1"
+    pretty-format "^24.4.0"
 
 jest-message-util@^24.3.0:
   version "24.3.0"
@@ -1892,9 +1892,9 @@ prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
 
-pretty-format@^24.3.1:
-  version "24.3.1"
-  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-24.3.1.tgz#ae4a98e93d73d86913a8a7dd1a7c3c900f8fda59"
+pretty-format@^24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-24.4.0.tgz#48db91969eb89f272c1bf3514bc5d5b228b3e722"
   dependencies:
     "@jest/types" "^24.3.0"
     ansi-regex "^4.0.0"
