@@ -15,7 +15,7 @@ import TaskSchema from '../api/models/todoListModel';
  * Init
  */
 const app: express.Application = express();
-const port = process.env.PORT || 3000;
+const port: number | string = process.env.PORT || 3000;
 
 /**
  * Mongo setup

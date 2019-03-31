@@ -1,13 +1,17 @@
 /**
  * External dependencies
  */
-import { model } from 'mongoose';
 import { Request, Response } from 'express';
+import { model, Document, Model } from 'mongoose';
 
 /**
  * Internal dependencies
  */
 import TaskSchema from '../models/todoListModel';
+
+interface ErrorObject {
+	message: string;
+}
 
 /**
  * Create the DB Model
@@ -17,21 +21,21 @@ const Task = model('Tasks', TaskSchema);
 /**
  * Custom messages
  */
-const deleteError: Object = {
+const deleteError: ErrorObject = {
 	message: 'Task successfully deleted!'
 };
 
-const createError: Object = {
+const createError: ErrorObject = {
 	message: 'Error: missing name!'
 };
 
 /**
  * Get all items
  */
-const listALL = (req: Request, res: Response): any => {
+const listALL = (req: Request, res: Response): void => {
 	Task.find(
 		{},
-		(err: Object, task: Object): void => {
+		(err: Error, task: Model<Document>): void => {
 			if (err) {
 				res.send(err);
 			} else {
@@ -44,8 +48,8 @@ const listALL = (req: Request, res: Response): any => {
 /**
  * Create an item
  */
-const create = (req: Request, res: Response): any => {
-	const task = new Task(req.body);
+const create = (req: Request, res: Response): Response | void => {
+	const task: Document = new Task(req.body);
 
 	if (!req.body.name) {
 		res.status(400);
@@ -54,7 +58,7 @@ const create = (req: Request, res: Response): any => {
 	}
 
 	task.save(
-		(err: Object, data: Object): void => {
+		(err: Error, data: Document): void => {
 			if (err) {
 				res.send(err);
 			} else {
@@ -70,7 +74,7 @@ const create = (req: Request, res: Response): any => {
 const read = (req: Request, res: Response): void => {
 	Task.findById(
 		req.params.taskId,
-		(err: Object, task: Object): void => {
+		(err: Error, task: Model<Document>): void => {
 			if (err) {
 				res.send(err);
 			} else {
@@ -90,7 +94,7 @@ const update = (req: Request, res: Response): void => {
 		{ _id },
 		req.body,
 		{ new: true },
-		(err: Object, task: Object): void => {
+		(err: Error, task: Document): void => {
 			if (err) {
 				res.send(err);
 			} else {
@@ -108,7 +112,7 @@ const remove = (req: Request, res: Response): void => {
 
 	Task.remove(
 		{ _id },
-		(err: Object): void => {
+		(err: Error): void => {
 			if (err) {
 				res.send(err);
 			} else {

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { model } from 'mongoose';
+import { Response } from 'express';
 import { ObjectId, ObjectID } from 'mongodb';
+import { model, Model, Document } from 'mongoose';
 import { beforeEach, describe, it } from 'mocha';
-import { Request, Response } from 'express';
 
 const expect = require('expect');
 const request = require('supertest');
@@ -33,12 +33,12 @@ interface TodoResponse extends Response {
 /**
  * Create the DB model
  */
-const Tasks = model('Tasks', TaskSchema);
+const Tasks: Model<Document> = model('Tasks', TaskSchema);
 
 /**
  * Mock data
  */
-const items = [
+const items: Todo[] = [
 	{
 		_id: new ObjectId(),
 		name: 'First todo',
@@ -56,18 +56,20 @@ const items = [
 /**
  * Empty and then populate the DB
  */
-beforeEach((done): void => {
-	Tasks.remove({})
-		.then((): any => Tasks.insertMany(items))
-		.then((): any => done());
-});
+beforeEach(
+	(done: MochaDone): void => {
+		Tasks.remove({})
+			.then((): Promise<Document[]> => Tasks.insertMany(items))
+			.then((): void => done());
+	}
+);
 
 /**
  * Run the test suite
  */
 describe('API', () => {
 	const name: string = 'New todo';
-	const first = items[0];
+	const first: Todo = items[0];
 	const newName: string = 'Updated todo';
 
 	it('should list all todos', (done: Function): void => {
@@ -81,7 +83,7 @@ describe('API', () => {
 				}
 			)
 			.end(
-				(err: Object, res: TodoResponse): void => {
+				(err: Error, res: TodoResponse): void => {
 					if (err) {
 						done(err);
 					} else {
@@ -91,25 +93,25 @@ describe('API', () => {
 			);
 	});
 
-	it('should create a new todo', (done: Function): void => {
+	it('should create a new todo', (done: MochaDone): void => {
 		request(app)
 			.post('/tasks')
 			.send({ name })
 			.expect(200)
 			.expect(
-				(res): void => {
+				(res: TodoResponse): void => {
 					expect(res.body.name).toBe(name);
 				}
 			)
 			.end(
-				(err: Object, res: TodoResponse): void => {
+				(err: Error, res: TodoResponse): void => {
 					if (err) {
 						return done(err);
 					}
 
 					Tasks.find(
 						{ name },
-						(err, todos: Todos): void => {
+						(err: Error, todos: Todos): void => {
 							if (err) {
 								done(err);
 							} else {
@@ -123,19 +125,19 @@ describe('API', () => {
 			);
 	});
 
-	it('should not create a new todo if invalid body is supplied', (done: Function): void => {
+	it('should not create a new todo if invalid body is supplied', (done: MochaDone): void => {
 		request(app)
 			.post('/tasks')
 			.send({})
 			.expect(400)
 			.end(
-				(err: Object, res: TodoResponse): void => {
+				(err: Error, res: TodoResponse): void => {
 					if (err) {
 						return done(err);
 					}
 
 					Tasks.find(
-						(err: any, todos: Todos): void => {
+						(err: Error, todos: Todos): void => {
 							if (err) {
 								done(err);
 							} else {
@@ -148,7 +150,7 @@ describe('API', () => {
 			);
 	});
 
-	it('should read a todo', (done: Function): void => {
+	it('should read a todo', (done: MochaDone): void => {
 		request(app)
 			.get(`/tasks/${first._id.toHexString()}`)
 			.expect(200)
@@ -160,7 +162,7 @@ describe('API', () => {
 			.end(done);
 	});
 
-	it('should update a todo', (done: Function): void => {
+	it('should update a todo', (done: MochaDone): void => {
 		request(app)
 			.put(`/tasks/${first._id.toHexString()}`)
 			.send({
@@ -175,7 +177,7 @@ describe('API', () => {
 			.end(done);
 	});
 
-	it('should delete a todo', (done: Function): void => {
+	it('should delete a todo', (done: MochaDone): void => {
 		request(app)
 			.delete(`/tasks/${first._id.toHexString()}`)
 			.expect(200)
