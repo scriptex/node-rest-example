@@ -106,9 +106,9 @@
     "@types/events" "*"
     "@types/node" "*"
 
-"@types/mongodb@3.1.25":
-  version "3.1.25"
-  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.1.25.tgz#1da0219b7d8c08859f811774673c803f906e5e05"
+"@types/mongodb@3.1.26":
+  version "3.1.26"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.1.26.tgz#6877554353fd9e9d03f28c62de09bad616ed7142"
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
