@@ -131,9 +131,9 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/mongoose@5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.5.0.tgz#282f3327d328f0e5e5d024cc520ee5d45404a055"
+"@types/mongoose@5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.5.1.tgz#a96daed080e94498a8cfd61d0bdddf752b6a5c9e"
   dependencies:
     "@types/mongodb" "*"
     "@types/node" "*"
@@ -256,11 +256,11 @@ async-each@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.3.tgz#b727dbf87d7651602f06f4d4ac387f47d91b0cbf"
 
-async@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
+async@2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.2.tgz#18330ea7e6e313887f5d2f2a904bac6fe4dd5381"
   dependencies:
-    lodash "^4.17.10"
+    lodash "^4.17.11"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -1649,16 +1649,6 @@ mocha@6.1.4:
     yargs-parser "13.0.0"
     yargs-unparser "1.5.0"
 
-mongodb-core@3.2.3, mongodb-core@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.2.3.tgz#eb9bcb876f169f5843fd135f7f7686dbac0e9e34"
-  dependencies:
-    bson "^1.1.1"
-    require_optional "^1.0.1"
-    safe-buffer "^5.1.2"
-  optionalDependencies:
-    saslprep "^1.0.0"
-
 mongodb-core@3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.2.4.tgz#6731b46c5f367bfeca94a0989e0dcb9f54e95208"
@@ -1668,13 +1658,6 @@ mongodb-core@3.2.4:
     safe-buffer "^5.1.2"
   optionalDependencies:
     saslprep "^1.0.0"
-
-mongodb@3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.2.3.tgz#4610ee33d300caa74329c2dd03e137210723cd91"
-  dependencies:
-    mongodb-core "^3.2.3"
-    safe-buffer "^5.1.2"
 
 mongodb@3.2.4:
   version "3.2.4"
@@ -1687,15 +1670,15 @@ mongoose-legacy-pluralize@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz#3ba9f91fa507b5186d399fb40854bff18fb563e4"
 
-mongoose@5.5.7:
-  version "5.5.7"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.5.7.tgz#496d2142b594579adaba5d4e3f1cc70c5a9ddd74"
+mongoose@5.5.8:
+  version "5.5.8"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.5.8.tgz#86128937c38c038680741041e846317a43c065cd"
   dependencies:
-    async "2.6.1"
+    async "2.6.2"
     bson "~1.1.1"
     kareem "2.3.0"
-    mongodb "3.2.3"
-    mongodb-core "3.2.3"
+    mongodb "3.2.4"
+    mongodb-core "3.2.4"
     mongoose-legacy-pluralize "1.0.2"
     mpath "0.6.0"
     mquery "3.2.0"
