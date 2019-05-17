@@ -1629,11 +1629,28 @@ mongodb-core@3.2.4:
   optionalDependencies:
     saslprep "^1.0.0"
 
+mongodb-core@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.2.5.tgz#08f9c78f44bba6a22d04fd3bce6bb257d82c7d35"
+  dependencies:
+    bson "^1.1.1"
+    require_optional "^1.0.1"
+    safe-buffer "^5.1.2"
+  optionalDependencies:
+    saslprep "^1.0.0"
+
 mongodb@3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.2.4.tgz#770eca46ba89a830816e172830c0743660a2ce31"
   dependencies:
     mongodb-core "3.2.4"
+    safe-buffer "^5.1.2"
+
+mongodb@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.2.5.tgz#36d9850e4f5eb40e4bc551bf3bd91f601d4824c4"
+  dependencies:
+    mongodb-core "3.2.5"
     safe-buffer "^5.1.2"
 
 mongoose-legacy-pluralize@1.0.2:
