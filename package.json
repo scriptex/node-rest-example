@@ -5,9 +5,17 @@
   "main": "server.js",
   "scripts": {
     "start": "concurrently \"mongod\" \"nodemon server.js\"",
-    "test": "mocha test.js --exit"
+    "test": "mocha test.js --exit",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "keywords": ["NodeJS", "MongoDB", "Express", "REST", "API"],
+  "keywords": [
+    "NodeJS",
+    "MongoDB",
+    "Express",
+    "REST",
+    "API"
+  ],
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
   "repository": "https://github.com/scriptex/node-rest-example",
   "bugs": {
@@ -27,7 +35,9 @@
     "express": "4.16.4",
     "lodash": "4.17.11",
     "mongodb": "3.2.2",
-    "mongoose": "5.4.20"
+    "mongoose": "5.4.20",
+    "snyk": "^1.189.0"
   },
-  "private": true
+  "private": true,
+  "snyk": true
 }
