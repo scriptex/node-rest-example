@@ -124,9 +124,9 @@
     "@types/events" "*"
     "@types/node" "*"
 
-"@types/mongodb@3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.2.1.tgz#295cd93cc2404a31efe8cd1b0b937671f2ec5079"
+"@types/mongodb@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.2.2.tgz#5c40510d8c0407423f1a29f820dd99f5573066fd"
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
@@ -1642,6 +1642,14 @@ mongodb@3.2.7:
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.2.7.tgz#8ba149e4be708257cad0dea72aebb2bbb311a7ac"
   dependencies:
     mongodb-core "3.2.7"
+    safe-buffer "^5.1.2"
+
+mongodb@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.3.0.tgz#3ec6fa6260405b16fe76cc37b5d09684d13d8c11"
+  dependencies:
+    bson "^1.1.1"
+    require_optional "^1.0.1"
     safe-buffer "^5.1.2"
 
 mongoose-legacy-pluralize@1.0.2:
