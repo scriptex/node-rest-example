@@ -266,7 +266,7 @@ async@2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.2.tgz#18330ea7e6e313887f5d2f2a904bac6fe4dd5381"
   dependencies:
-    lodash "^4.17.11"
+    lodash "^4.17.15"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -1455,10 +1455,6 @@ locate-path@^3.0.0:
 lodash@4.17.15, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-
-lodash@^4.17.11:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
 log-symbols@2.2.0:
   version "2.2.0"
@@ -2759,7 +2755,7 @@ yargs-unparser@1.5.0:
   resolved "https://registry.yarnpkg.com/yargs-unparser/-/yargs-unparser-1.5.0.tgz#f2bb2a7e83cbc87bb95c8e572828a06c9add6e0d"
   dependencies:
     flat "^4.1.0"
-    lodash "^4.17.11"
+    lodash "^4.17.15"
     yargs "^12.0.5"
 
 yargs@13.2.2:
