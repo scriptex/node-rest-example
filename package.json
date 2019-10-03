@@ -25,8 +25,8 @@
   "license": "MIT",
   "devDependencies": {
     "expect": "24.9.0",
-    "mocha": "6.2.0",
-    "nodemon": "1.19.2",
+    "mocha": "6.2.1",
+    "nodemon": "1.19.3",
     "supertest": "4.0.2"
   },
   "dependencies": {
@@ -35,8 +35,8 @@
     "express": "4.17.1",
     "lodash": "4.17.15",
     "mongodb": "3.3.2",
-    "mongoose": "5.7.1",
-    "snyk": "^1.189.0"
+    "mongoose": "5.7.3",
+    "snyk": "^1.230.4"
   },
   "private": true,
   "snyk": true
