@@ -10,3 +10,8 @@ patch:
         patched: '2019-07-03T22:07:43.137Z'
     - mongoose > async > lodash:
         patched: '2019-07-03T22:07:43.137Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-03T22:08:23.720Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-03T22:08:23.720Z'
