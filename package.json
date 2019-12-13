@@ -7,7 +7,7 @@
     "start": "concurrently \"mongod\" \"nodemon server.js\"",
     "test": "mocha test.js --exit",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "yarn run snyk-protect"
   },
   "keywords": [
     "NodeJS",
@@ -36,7 +36,7 @@
     "lodash": "4.17.15",
     "mongodb": "3.3.3",
     "mongoose": "5.7.7",
-    "snyk": "^1.230.5"
+    "snyk": "^1.258.2"
   },
   "private": true,
   "snyk": true
