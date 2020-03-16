@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "body-parser": "1.19.0",
-    "concurrently": "5.0.0",
+    "concurrently": "5.0.1",
     "express": "4.17.1",
     "lodash": "4.17.15",
     "mongodb": "3.3.3",
