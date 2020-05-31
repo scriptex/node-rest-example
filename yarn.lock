@@ -128,10 +128,10 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/mongodb@3.5.19":
-  version "3.5.19"
-  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.5.19.tgz#076c6fa5a1fedc1672a4142301f06de0ccc224b9"
-  integrity sha512-CzcWhcvEvZqKAnVBkoBeMkHWbxW3g2u297BYVdElyMCzjLX9K+IGzKS3zNvxvdr+pFZO9PtXZMGX7SsVTZc83g==
+"@types/mongodb@3.5.20":
+  version "3.5.20"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.5.20.tgz#4065afc55b6275d0dd8e831fa421018475d54d56"
+  integrity sha512-BN0wJn670DkivxiP7ZW0InX4qBtX01qITaucD+3A+sTgPQo4XUYay0Y+sGM4MJ9OyKDRlb3RQuVAlyeWzl/NoA==
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
