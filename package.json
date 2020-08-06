@@ -1,43 +1,48 @@
 {
-  "name": "node-rest-example",
-  "version": "0.0.1",
-  "description": "REST API example using NodeJS, MongoDB and Express",
-  "main": "server.js",
-  "scripts": {
-    "start": "concurrently \"mongod\" \"nodemon server.js\"",
-    "test": "mocha test.js --exit",
-    "snyk-protect": "snyk protect",
-    "prepublish": "yarn run snyk-protect"
-  },
-  "keywords": [
-    "NodeJS",
-    "MongoDB",
-    "Express",
-    "REST",
-    "API"
-  ],
-  "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-  "repository": "https://github.com/scriptex/node-rest-example",
-  "bugs": {
-    "url": "https://github.com/scriptex/node-rest-example/issues",
-    "email": "scriptex.bg@gmail.com"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "expect": "25.2.4",
-    "mocha": "7.1.1",
-    "nodemon": "2.0.2",
-    "supertest": "4.0.2"
-  },
-  "dependencies": {
-    "body-parser": "1.19.0",
-    "concurrently": "5.1.0",
-    "express": "4.17.1",
-    "lodash": "4.17.15",
-    "mongodb": "3.5.5",
-    "mongoose": "5.9.7",
-    "snyk": "^1.305.0"
-  },
-  "private": true,
-  "snyk": true
+	"name": "node-rest-example",
+	"version": "0.0.1",
+	"description": "REST API example using NodeJS, MongoDB and Express",
+	"main": "server.js",
+	"scripts": {
+		"db": "mongod --dbpath ./data/db",
+		"dev": "ts-node ./src/server.ts",
+		"build": "tsc",
+		"start": "concurrently \"yarn db\" \"yarn dev\"",
+		"test": "mocha --exit -r ts-node/register src/**/*.test.ts"
+	},
+	"keywords": [
+		"NodeJS",
+		"MongoDB",
+		"Express",
+		"REST",
+		"API"
+	],
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+	"repository": "https://github.com/scriptex/node-rest-example",
+	"bugs": {
+		"url": "https://github.com/scriptex/node-rest-example/issues",
+		"email": "scriptex.bg@gmail.com"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"expect": "26.2.0",
+		"mocha": "8.1.1",
+		"nodemon": "2.0.4",
+		"supertest": "4.0.2",
+		"ts-node": "8.10.2",
+		"typescript": "3.9.7"
+	},
+	"dependencies": {
+		"@types/express": "4.17.7",
+		"@types/mocha": "8.0.1",
+		"@types/mongodb": "3.5.25",
+		"@types/mongoose": "5.7.34",
+		"body-parser": "1.19.0",
+		"concurrently": "5.2.0",
+		"express": "4.17.1",
+		"lodash": "4.17.19",
+		"mongodb": "3.6.0",
+		"mongoose": "5.9.27"
+	},
+	"private": true
 }
