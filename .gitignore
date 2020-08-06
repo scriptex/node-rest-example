@@ -19,3 +19,5 @@ Thumbs.db
 
 # Build folder
 dist
+data/db/*
+!data/db/.gitkeep
