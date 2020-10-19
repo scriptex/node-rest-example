@@ -25,7 +25,7 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"expect": "26.5.3",
+		"expect": "26.6.0",
 		"mocha": "8.2.0",
 		"nodemon": "2.0.5",
 		"supertest": "5.0.0",
