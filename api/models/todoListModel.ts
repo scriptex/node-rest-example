@@ -7,10 +7,7 @@ import { Schema } from 'mongoose';
  * Create the DB Schema
  */
 export default new Schema({
-	name: {
-		type: String,
-		required: 'Enter the name of the task'
-	},
+	name: String,
 	Created_date: {
 		type: Date,
 		default: Date.now
