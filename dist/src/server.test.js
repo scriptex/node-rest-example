@@ -129,10 +129,7 @@ mocha_1.describe('API', () => {
             .end(done);
     });
     mocha_1.it('should delete a todo', (done) => {
-        request(server_1.default)
-            .delete(`/tasks/${first._id.toHexString()}`)
-            .expect(200)
-            .end(done);
+        request(server_1.default).delete(`/tasks/${first._id.toHexString()}`).expect(200).end(done);
     });
 });
 //# sourceMappingURL=server.test.js.map
