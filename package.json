@@ -38,7 +38,7 @@
 		"@types/mongodb": "3.6.12",
 		"@types/mongoose": "5.10.4",
 		"body-parser": "1.19.0",
-		"concurrently": "6.0.1",
+		"concurrently": "6.0.2",
 		"express": "4.17.1",
 		"lodash": "4.17.21",
 		"mongodb": "3.6.6",
