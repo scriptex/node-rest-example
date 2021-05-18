@@ -116,10 +116,18 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-8.2.2.tgz#91daa226eb8c2ff261e6a8cbf8c7304641e095e0"
   integrity sha512-Lwh0lzzqT5Pqh6z61P3c3P5nm6fzQK/MMHl9UKeneAeInVflBSz1O2EkX6gM6xfJd7FBXBY5purtLx7fUiZ7Hw==
 
-"@types/mongodb@*", "@types/mongodb@3.6.12", "@types/mongodb@^3.5.27":
+"@types/mongodb@*", "@types/mongodb@^3.5.27":
   version "3.6.12"
   resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.6.12.tgz#727960d34f35054d2f2ce68909e16094f742d935"
   integrity sha512-49aEzQD5VdHPxyd5dRyQdqEveAg9LanwrH8RQipnMuulwzKmODXIZRp0umtxi1eBUfEusRkoy8AVOMr+kVuFog==
+  dependencies:
+    "@types/bson" "*"
+    "@types/node" "*"
+
+"@types/mongodb@3.6.13":
+  version "3.6.13"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.6.13.tgz#bb530d09878c14df4f6d18abbadae244dc419159"
+  integrity sha512-N/e2+oVqDWIiKos+5vsx3Oj8VtgzyplpV9N8tLMM2g/xrK30doWYSYW7fwHSaHQdX+hrUlPxZ775p4KRnhIPyA==
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
