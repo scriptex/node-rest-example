@@ -1,13 +1,12 @@
 /**
  * External dependencies
  */
+import * as expect from 'expect';
+import * as request from 'supertest';
 import { Response } from 'express';
 import { ObjectId, ObjectID } from 'mongodb';
 import { model, Model, Document } from 'mongoose';
 import { beforeEach, describe, it, Done } from 'mocha';
-
-const expect = require('expect');
-const request = require('supertest');
 
 /**
  * Internal dependencies
@@ -78,13 +77,7 @@ describe('API', () => {
 			.expect((res: Todos): void => {
 				expect(res.body.length).toBe(items.length);
 			})
-			.end((err: Error, res: TodoResponse): void => {
-				if (err) {
-					done(err);
-				} else {
-					done();
-				}
-			});
+			.end((err: Error): void => (err ? done(err) : done()));
 	});
 
 	it('should create a new todo', (done: Done): void => {
@@ -95,7 +88,7 @@ describe('API', () => {
 			.expect((res: TodoResponse): void => {
 				expect(res.body.name).toBe(name);
 			})
-			.end((err: Error, res: TodoResponse): void => {
+			.end((err: Error): void => {
 				if (err) {
 					return done(err);
 				}
@@ -117,7 +110,7 @@ describe('API', () => {
 			.post('/tasks')
 			.send({})
 			.expect(400)
-			.end((err: Error, res: TodoResponse): void => {
+			.end((err: Error): void => {
 				if (err) {
 					return done(err);
 				}
