@@ -28,7 +28,7 @@
 		"@types/mocha": "8.2.2",
 		"@types/node": "15.6.1",
 		"@types/supertest": "2.0.11",
-		"expect": "27.0.0",
+		"expect": "27.0.1",
 		"mocha": "8.4.0",
 		"nodemon": "2.0.7",
 		"supertest": "6.1.3",
