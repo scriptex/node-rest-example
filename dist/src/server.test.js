@@ -1,10 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * External dependencies
+ */
+const expect = require("expect");
+const request = require("supertest");
 const mongodb_1 = require("mongodb");
 const mongoose_1 = require("mongoose");
 const mocha_1 = require("mocha");
-const expect = require('expect');
-const request = require('supertest');
 /**
  * Internal dependencies
  */
@@ -54,14 +57,7 @@ mocha_1.describe('API', () => {
             .expect((res) => {
             expect(res.body.length).toBe(items.length);
         })
-            .end((err, res) => {
-            if (err) {
-                done(err);
-            }
-            else {
-                done();
-            }
-        });
+            .end((err) => (err ? done(err) : done()));
     });
     mocha_1.it('should create a new todo', (done) => {
         request(server_1.default)
@@ -71,7 +67,7 @@ mocha_1.describe('API', () => {
             .expect((res) => {
             expect(res.body.name).toBe(name);
         })
-            .end((err, res) => {
+            .end((err) => {
             if (err) {
                 return done(err);
             }
@@ -92,7 +88,7 @@ mocha_1.describe('API', () => {
             .post('/tasks')
             .send({})
             .expect(400)
-            .end((err, res) => {
+            .end((err) => {
             if (err) {
                 return done(err);
             }
