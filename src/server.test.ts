@@ -4,7 +4,7 @@
 import * as expect from 'expect';
 import * as request from 'supertest';
 import { Response } from 'express';
-import { ObjectId, ObjectID } from 'mongodb';
+import { ObjectId } from 'mongodb';
 import { model, Model, Document } from 'mongoose';
 import { beforeEach, describe, it, Done } from 'mocha';
 
@@ -15,7 +15,7 @@ import app from './server';
 import TaskSchema from '../api/models/todoListModel';
 
 interface Todo {
-	_id: ObjectID;
+	_id: ObjectId;
 	name: string;
 	Created_date: number;
 	status: string;
