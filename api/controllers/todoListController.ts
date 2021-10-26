@@ -33,16 +33,13 @@ const createError: ErrorObject = {
  * Get all items
  */
 const listALL = (req: Request, res: Response): void => {
-	Task.find(
-		{},
-		(err: Error, task: Model<Document>): void => {
-			if (err) {
-				res.send(err);
-			} else {
-				res.json(task);
-			}
+	Task.find({}, (err: Error, task: Model<Document>): void => {
+		if (err) {
+			res.send(err);
+		} else {
+			res.json(task);
 		}
-	);
+	});
 };
 
 /**
@@ -57,31 +54,26 @@ const create = (req: Request, res: Response): Response | void => {
 		return res.send(createError);
 	}
 
-	task.save(
-		(err: Error, data: Document): void => {
-			if (err) {
-				res.send(err);
-			} else {
-				res.json(task);
-			}
+	task.save((err: Error, data: Document): void => {
+		if (err) {
+			res.send(err);
+		} else {
+			res.json(task);
 		}
-	);
+	});
 };
 
 /**
  * Read an item
  */
 const read = (req: Request, res: Response): void => {
-	Task.findById(
-		req.params.taskId,
-		(err: Error, task: Model<Document>): void => {
-			if (err) {
-				res.send(err);
-			} else {
-				res.json(task);
-			}
+	Task.findById(req.params.taskId, (err: Error, task: Model<Document>): void => {
+		if (err) {
+			res.send(err);
+		} else {
+			res.json(task);
 		}
-	);
+	});
 };
 
 /**
@@ -90,18 +82,13 @@ const read = (req: Request, res: Response): void => {
 const update = (req: Request, res: Response): void => {
 	const _id = req.params.taskId;
 
-	Task.findOneAndUpdate(
-		{ _id },
-		req.body,
-		{ new: true },
-		(err: Error, task: Document): void => {
-			if (err) {
-				res.send(err);
-			} else {
-				res.json(task);
-			}
+	Task.findOneAndUpdate({ _id }, req.body, { new: true }, (err: Error, task: Document): void => {
+		if (err) {
+			res.send(err);
+		} else {
+			res.json(task);
 		}
-	);
+	});
 };
 
 /**
@@ -110,16 +97,13 @@ const update = (req: Request, res: Response): void => {
 const remove = (req: Request, res: Response): void => {
 	const _id = req.params.taskId;
 
-	Task.remove(
-		{ _id },
-		(err: Error): void => {
-			if (err) {
-				res.send(err);
-			} else {
-				res.json({ _id });
-			}
+	Task.remove({ _id }, (err: Error): void => {
+		if (err) {
+			res.send(err);
+		} else {
+			res.json({ _id });
 		}
-	);
+	});
 };
 
 export { listALL, create, read, update, remove };
