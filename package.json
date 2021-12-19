@@ -40,7 +40,7 @@
 		"@types/mongodb": "4.0.7",
 		"@types/mongoose": "5.11.97",
 		"body-parser": "1.19.1",
-		"concurrently": "6.5.0",
+		"concurrently": "6.5.1",
 		"express": "4.17.2",
 		"lodash": "4.17.21",
 		"mongodb": "4.2.2",
