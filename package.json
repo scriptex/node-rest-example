@@ -29,7 +29,7 @@
 		"@types/node": "16.11.19",
 		"@types/supertest": "2.0.11",
 		"expect": "27.4.6",
-		"mocha": "9.1.3",
+		"mocha": "9.1.4",
 		"nodemon": "2.0.15",
 		"supertest": "6.2.1",
 		"ts-node": "10.4.0",
