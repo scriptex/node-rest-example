@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import * as expect from 'expect';
+import { expect } from 'expect';
 import * as request from 'supertest';
 import { Response } from 'express';
 import { ObjectId } from 'mongodb';
