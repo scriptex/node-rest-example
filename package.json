@@ -44,7 +44,7 @@
 		"express": "4.18.1",
 		"lodash": "4.17.21",
 		"mongodb": "4.5.0",
-		"mongoose": "6.3.2"
+		"mongoose": "6.3.3"
 	},
 	"private": true
 }
