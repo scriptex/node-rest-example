@@ -6,6 +6,7 @@
 	"scripts": {
 		"db": "mongod --dbpath ./data/db",
 		"dev": "ts-node ./src/server.ts",
+		"tsc": "tsc --noEmit --skipLibCheck",
 		"build": "tsc",
 		"start": "concurrently \"yarn db\" \"yarn dev\"",
 		"test": "mocha --exit -r ts-node/register src/**/*.test.ts"
@@ -26,7 +27,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"@types/mocha": "9.1.1",
-		"@types/node": "16.11.41",
+		"@types/node": "18.0.0",
 		"@types/supertest": "2.0.12",
 		"expect": "28.1.1",
 		"mocha": "10.0.0",

@@ -82,7 +82,7 @@ const read = (req: Request, res: Response): void => {
 const update = (req: Request, res: Response): void => {
 	const _id = req.params.taskId;
 
-	Task.findOneAndUpdate({ _id }, req.body, { new: true }, (err: Error, task: Document): void => {
+	Task.findOneAndUpdate({ _id }, req.body, { new: true }, (err: Error, task): void => {
 		if (err) {
 			res.send(err);
 		} else {

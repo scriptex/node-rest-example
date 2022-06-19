@@ -32,7 +32,7 @@ interface TodoResponse extends Response {
 /**
  * Create the DB model
  */
-const Tasks: Model<Document> = model('Tasks', TaskSchema);
+const Tasks: Model<unknown> = model('Tasks', TaskSchema);
 
 /**
  * Mock data
