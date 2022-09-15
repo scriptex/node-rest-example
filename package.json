@@ -1,7 +1,25 @@
 {
 	"name": "node-rest-example",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "REST API example using NodeJS, MongoDB and Express",
+	"keywords": [
+		"API",
+		"REST",
+		"REST API",
+		"Node API",
+		"Node REST API",
+		"API Example",
+		"REST API Example",
+		"Node REST API Example"
+	],
+	"homepage": "https://atanas.info/projects/node-rest-example.html",
+	"bugs": {
+		"url": "https://github.com/scriptex/node-rest-example/issues",
+		"email": "hi@atanas.info"
+	},
+	"license": "MIT",
+	"author": "Atanas Atanasov <hi@atanas.info> (https://atanas.info)",
+	"funding": "https://github.com/sponsors/scriptex",
 	"main": "server.js",
 	"scripts": {
 		"db": "mongod --dbpath ./data/db",
@@ -11,23 +29,9 @@
 		"start": "concurrently \"yarn db\" \"yarn dev\"",
 		"test": "mocha --exit -r ts-node/register src/**/*.test.ts"
 	},
-	"keywords": [
-		"NodeJS",
-		"MongoDB",
-		"Express",
-		"REST",
-		"API"
-	],
-	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-	"repository": "https://github.com/scriptex/node-rest-example",
-	"bugs": {
-		"url": "https://github.com/scriptex/node-rest-example/issues",
-		"email": "scriptex.bg@gmail.com"
-	},
-	"license": "MIT",
 	"devDependencies": {
 		"@types/mocha": "9.1.1",
-		"@types/node": "18.7.14",
+		"@types/node": "18.7.18",
 		"@types/supertest": "2.0.12",
 		"expect": "29.0.3",
 		"mocha": "10.0.0",
