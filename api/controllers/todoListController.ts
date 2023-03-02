@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
+import { model, Document } from 'mongoose';
 import { Request, Response } from 'express';
-import { model, Document, Model } from 'mongoose';
 
 /**
  * Internal dependencies
