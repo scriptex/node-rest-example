@@ -55,10 +55,11 @@ const items: Todo[] = [
 /**
  * Empty and then populate the DB
  */
-beforeEach((done: Done): void => {
-	Tasks.remove({})
-		.then((): Promise<Document[]> => Tasks.insertMany(items))
-		.then((): void => done());
+beforeEach(async () => {
+	await new Promise(resolve => {
+		Tasks.findOneAndRemove({}).then((): Promise<Document[]> => Tasks.insertMany(items));
+		resolve(true);
+	});
 });
 
 /**
@@ -93,15 +94,13 @@ describe('API', () => {
 					return done(err);
 				}
 
-				Tasks.find({ name }, (err: Error, todos: Todos): void => {
-					if (err) {
-						done(err);
-					} else {
+				Tasks.find({ name })
+					.then((todos: Todos) => {
 						expect(todos.length).toBe(1);
 						expect(todos[0].name).toBe(name);
 						done();
-					}
-				});
+					})
+					.catch(done);
 			});
 	});
 
@@ -115,14 +114,12 @@ describe('API', () => {
 					return done(err);
 				}
 
-				Tasks.find((err: Error, todos: Todos): void => {
-					if (err) {
-						done(err);
-					} else {
+				Tasks.find()
+					.then((todos: Todos) => {
 						expect(todos.length).toBe(items.length);
 						done();
-					}
-				});
+					})
+					.catch(done);
 			});
 	});
 
