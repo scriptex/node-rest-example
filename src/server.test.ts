@@ -5,8 +5,8 @@ import { expect } from 'expect';
 import * as request from 'supertest';
 import { Response } from 'express';
 import { ObjectId } from 'mongodb';
-import { model, Model, Document } from 'mongoose';
 import { beforeEach, describe, it, Done } from 'mocha';
+import { model, Model, Document, MergeType } from 'mongoose';
 
 /**
  * Internal dependencies
@@ -57,7 +57,9 @@ const items: Todo[] = [
  */
 beforeEach(async () => {
 	await new Promise(resolve => {
-		Tasks.findOneAndRemove({}).then((): Promise<Document[]> => Tasks.insertMany(items));
+		Tasks.findOneAndRemove({}).then(
+			(): Promise<MergeType<Document, Omit<Document, '_id'>>[]> => Tasks.insertMany(items)
+		);
 		resolve(true);
 	});
 });
