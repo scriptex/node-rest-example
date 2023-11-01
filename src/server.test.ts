@@ -57,7 +57,7 @@ const items: Todo[] = [
  */
 beforeEach(async () => {
 	await new Promise(resolve => {
-		Tasks.findOneAndRemove({}).then(
+		Tasks.findOneAndDelete({}).then(
 			(): Promise<MergeType<Document, Omit<Document, '_id'>>[]> => Tasks.insertMany(items)
 		);
 		resolve(true);
