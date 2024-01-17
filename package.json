@@ -31,11 +31,11 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "10.0.6",
-		"@types/node": "20.11.4",
+		"@types/node": "20.11.5",
 		"@types/supertest": "6.0.2",
 		"expect": "29.7.0",
 		"mocha": "10.2.0",
-		"nodemon": "3.0.2",
+		"nodemon": "3.0.3",
 		"supertest": "6.3.4",
 		"ts-node": "10.9.2",
 		"typescript": "5.3.3"
