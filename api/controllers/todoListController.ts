@@ -21,10 +21,6 @@ const Task = model('Tasks', TaskSchema);
 /**
  * Custom messages
  */
-const deleteError: ErrorObject = {
-	message: 'Task successfully deleted!'
-};
-
 const createError: ErrorObject = {
 	message: 'Error: missing name!'
 };
@@ -77,7 +73,7 @@ const update = (req: Request, res: Response): void => {
 const remove = (req: Request, res: Response): void => {
 	const _id = req.params.taskId;
 
-	Task.findByIdAndRemove({ _id })
+	Task.findByIdAndDelete({ _id })
 		.then(() => res.json({ _id }))
 		.catch(res.send);
 };
