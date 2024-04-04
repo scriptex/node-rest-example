@@ -38,7 +38,7 @@
 		"nodemon": "3.1.0",
 		"supertest": "6.3.4",
 		"ts-node": "10.9.2",
-		"typescript": "5.4.3"
+		"typescript": "5.4.4"
 	},
 	"dependencies": {
 		"@types/express": "4.17.21",
