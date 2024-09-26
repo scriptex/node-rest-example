@@ -35,13 +35,13 @@ const listALL = (req: Request, res: Response): void => {
 /**
  * Create an item
  */
-const create = (req: Request, res: Response): Response | void => {
+const create = (req: Request, res: Response): Promise<void> | void => {
 	const task: Document = new Task(req.body);
 
 	if (!req.body.name) {
 		res.status(400);
 
-		return res.send(createError);
+		res.send(createError);
 	}
 
 	task.save()
