@@ -31,11 +31,11 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "10.0.10",
-		"@types/node": "22.10.1",
+		"@types/node": "22.10.2",
 		"@types/supertest": "6.0.2",
 		"expect": "29.7.0",
 		"mocha": "11.0.1",
-		"nodemon": "3.1.7",
+		"nodemon": "3.1.9",
 		"supertest": "7.0.0",
 		"ts-node": "10.9.2",
 		"typescript": "5.7.2"
@@ -46,10 +46,10 @@
 		"@types/mongoose": "5.11.97",
 		"body-parser": "1.20.3",
 		"concurrently": "9.1.0",
-		"express": "4.21.1",
+		"express": "4.21.2",
 		"lodash": "4.17.21",
 		"mongodb": "6.11.0",
-		"mongoose": "8.8.3"
+		"mongoose": "8.8.4"
 	},
 	"private": true
 }
