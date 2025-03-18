@@ -225,10 +225,10 @@
   dependencies:
     undici-types "~6.19.2"
 
-"@types/node@22.13.9":
-  version "22.13.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.9.tgz#5d9a8f7a975a5bd3ef267352deb96fb13ec02eca"
-  integrity sha512-acBjXdRJ3A6Pb3tqnw9HZmyR3Fiol3aGxRCK1x3d+6CDAMjl7I649wpSd+yNURCjbOUGu9tqtLKnTGxmK6CyGw==
+"@types/node@22.13.10":
+  version "22.13.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.10.tgz#df9ea358c5ed991266becc3109dc2dc9125d77e4"
+  integrity sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==
   dependencies:
     undici-types "~6.20.0"
 
@@ -1290,7 +1290,16 @@ mongodb@*, mongodb@~6.12.0:
     bson "^6.10.1"
     mongodb-connection-string-url "^3.0.0"
 
-mongodb@6.14.1, mongodb@~6.14.0:
+mongodb@6.14.2:
+  version "6.14.2"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-6.14.2.tgz#56533105e62ce795cd10a205a6374ecd8d58ad49"
+  integrity sha512-kMEHNo0F3P6QKDq17zcDuPeaywK/YaJVCEQRzPF3TOM/Bl9MFg64YE5Tu7ifj37qZJMhwU1tl2Ioivws5gRG5Q==
+  dependencies:
+    "@mongodb-js/saslprep" "^1.1.9"
+    bson "^6.10.3"
+    mongodb-connection-string-url "^3.0.0"
+
+mongodb@~6.14.0:
   version "6.14.1"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-6.14.1.tgz#ab1084c00eba5f736b9ac8a93055d7d3ad0725a8"
   integrity sha512-GnHWIm4GtgREkssWRv9vYKNvqwbLd8WL5hCW3nCqzI2OxEZ6Q5g6vc3J6L1Grz0x1hx1wmYAprLlRr3kzBLcJg==
@@ -1312,12 +1321,12 @@ mongoose@*:
     ms "2.1.3"
     sift "17.1.3"
 
-mongoose@8.12.0:
-  version "8.12.0"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-8.12.0.tgz#1d0313982b1b737a1552e05541980b04a3979375"
-  integrity sha512-FXZIngJBTt/gvb6uHZHiROy3Mk3EOjNpD0m+GBRfG+twuEntnMjfxwcA94YbYIulf9LkBozt7H8w2OJpqHdUxA==
+mongoose@8.12.1:
+  version "8.12.1"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-8.12.1.tgz#20fdc9a6cff72b323e438c6b4492cd4d4e1dd989"
+  integrity sha512-UW22y8QFVYmrb36hm8cGncfn4ARc/XsYWQwRTaj0gxtQk1rDuhzDO1eBantS+hTTatfAIS96LlRCJrcNHvW5+Q==
   dependencies:
-    bson "^6.10.1"
+    bson "^6.10.3"
     kareem "2.6.3"
     mongodb "~6.14.0"
     mpath "0.9.0"
