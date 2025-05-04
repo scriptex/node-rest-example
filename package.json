@@ -31,10 +31,10 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "10.0.10",
-		"@types/node": "22.14.1",
+		"@types/node": "22.15.3",
 		"@types/supertest": "6.0.3",
 		"expect": "29.7.0",
-		"mocha": "11.1.0",
+		"mocha": "11.2.2",
 		"nodemon": "3.1.10",
 		"supertest": "7.1.0",
 		"ts-node": "10.9.2",
@@ -48,8 +48,8 @@
 		"concurrently": "9.1.2",
 		"express": "5.1.0",
 		"lodash": "4.17.21",
-		"mongodb": "6.15.0",
-		"mongoose": "8.13.3"
+		"mongodb": "6.16.0",
+		"mongoose": "8.14.1"
 	},
 	"private": true
 }
