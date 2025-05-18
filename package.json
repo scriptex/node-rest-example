@@ -34,7 +34,7 @@
 		"@types/node": "22.15.18",
 		"@types/supertest": "6.0.3",
 		"expect": "29.7.0",
-		"mocha": "11.2.2",
+		"mocha": "11.3.0",
 		"nodemon": "3.1.10",
 		"supertest": "7.1.1",
 		"ts-node": "10.9.2",
@@ -49,7 +49,7 @@
 		"express": "5.1.0",
 		"lodash": "4.17.21",
 		"mongodb": "6.16.0",
-		"mongoose": "8.14.3"
+		"mongoose": "8.15.0"
 	},
 	"private": true
 }
