@@ -31,7 +31,7 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "10.0.10",
-		"@types/node": "22.15.35",
+		"@types/node": "22.16.0",
 		"@types/supertest": "6.0.3",
 		"expect": "30.0.4",
 		"mocha": "11.7.1",
@@ -45,7 +45,7 @@
 		"@types/mongodb": "4.0.7",
 		"@types/mongoose": "5.11.97",
 		"body-parser": "2.2.0",
-		"concurrently": "9.1.2",
+		"concurrently": "9.2.0",
 		"express": "5.1.0",
 		"lodash": "4.17.21",
 		"mongodb": "6.17.0",
