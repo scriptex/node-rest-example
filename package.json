@@ -31,7 +31,7 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "10.0.10",
-		"@types/node": "22.18.8",
+		"@types/node": "22.18.11",
 		"@types/supertest": "6.0.3",
 		"expect": "30.2.0",
 		"mocha": "11.7.4",
@@ -49,7 +49,7 @@
 		"express": "5.1.0",
 		"lodash": "4.17.21",
 		"mongodb": "6.20.0",
-		"mongoose": "8.19.0"
+		"mongoose": "8.19.1"
 	},
 	"private": true
 }
