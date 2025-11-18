@@ -48,7 +48,7 @@
 		"concurrently": "9.2.1",
 		"express": "5.1.0",
 		"lodash": "4.17.21",
-		"mongodb": "6.20.0",
+		"mongodb": "7.0.0",
 		"mongoose": "8.19.3"
 	},
 	"private": true
