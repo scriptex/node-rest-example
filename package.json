@@ -44,7 +44,7 @@
 		"@types/express": "5.0.5",
 		"@types/mongodb": "4.0.7",
 		"@types/mongoose": "5.11.97",
-		"body-parser": "2.2.0",
+		"body-parser": "2.2.1",
 		"concurrently": "9.2.1",
 		"express": "5.1.0",
 		"lodash": "4.17.21",
