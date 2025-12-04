@@ -41,15 +41,15 @@
 		"typescript": "5.9.3"
 	},
 	"dependencies": {
-		"@types/express": "5.0.5",
+		"@types/express": "5.0.6",
 		"@types/mongodb": "4.0.7",
 		"@types/mongoose": "5.11.97",
 		"body-parser": "2.2.1",
 		"concurrently": "9.2.1",
-		"express": "5.2.0",
+		"express": "5.2.1",
 		"lodash": "4.17.21",
 		"mongodb": "7.0.0",
-		"mongoose": "8.20.0"
+		"mongoose": "8.20.1"
 	},
 	"private": true
 }
