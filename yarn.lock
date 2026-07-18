@@ -112,6 +112,13 @@
   dependencies:
     sparse-bitfield "^3.0.3"
 
+"@mongodb-js/saslprep@^1.4.11":
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/@mongodb-js/saslprep/-/saslprep-1.4.12.tgz#919ed57f24bb0a9087963fc6e94ee24c37fe08a9"
+  integrity sha512-QAfAMwNgnYxZ2C6D1HgeP7Gc4i/uvJRim415PCIL9ptRxWMNbWeLBYb2/9R4pGKny/s1FVu2JA2cxCUBUOggrA==
+  dependencies:
+    sparse-bitfield "^3.0.3"
+
 "@noble/hashes@^1.1.5":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.8.0.tgz#cee43d801fcef9644b11b8194857695acd5f815a"
@@ -1408,6 +1415,14 @@ mongodb-connection-string-url@^7.0.0:
     "@types/whatwg-url" "^13.0.0"
     whatwg-url "^14.1.0"
 
+mongodb-connection-string-url@^7.0.1:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/mongodb-connection-string-url/-/mongodb-connection-string-url-7.0.2.tgz#a58163e04a900b7da38054de03b36d6f8b6d3ad1"
+  integrity sha512-ZoS07RoFqpKYQwAk59qmrx8+jJHNHU30UjlU96QktiGn1ltvDr+vCznLX5DiUBLEpMAHatHNWV1nM/74ul66kA==
+  dependencies:
+    "@types/whatwg-url" "^13.0.0"
+    whatwg-url "^14.1.0"
+
 mongodb@*:
   version "6.12.0"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-6.12.0.tgz#8b0bda1b18cbb3f0aec8ab4119c5dc535a43c444"
@@ -1417,14 +1432,14 @@ mongodb@*:
     bson "^6.10.1"
     mongodb-connection-string-url "^3.0.0"
 
-mongodb@7.4.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-7.4.0.tgz#83f7cf64b26f3debe6c678141ee6490a2957cd46"
-  integrity sha512-giySkkdYiwoBFo/oCc8nzov3xOYZ/sB8OpAYk5GINRLEjVw0LDsm8xgQL0XMTyU4extQlDZjhdUr1ZEwKFaazw==
+mongodb@7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-7.5.0.tgz#f87d212b394a05e610ee1c3a0b886bea55ab3c13"
+  integrity sha512-5FnrEDLnvp6ycUOGLNLLU33BfCx2qmp2mJjGPDwKLruYsVzXVSK5fsGpoDXvsXJwBfBsD7ebMRdawbDxC2814g==
   dependencies:
-    "@mongodb-js/saslprep" "^1.3.0"
+    "@mongodb-js/saslprep" "^1.4.11"
     bson "^7.2.0"
-    mongodb-connection-string-url "^7.0.0"
+    mongodb-connection-string-url "^7.0.1"
 
 mongodb@~7.2:
   version "7.2.0"
