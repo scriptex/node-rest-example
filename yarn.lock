@@ -1417,7 +1417,7 @@ mongodb@*:
     bson "^6.10.1"
     mongodb-connection-string-url "^3.0.0"
 
-mongodb@7.5.0:
+mongodb@7.5.0, mongodb@~7.5:
   version "7.5.0"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-7.5.0.tgz#f87d212b394a05e610ee1c3a0b886bea55ab3c13"
   integrity sha512-5FnrEDLnvp6ycUOGLNLLU33BfCx2qmp2mJjGPDwKLruYsVzXVSK5fsGpoDXvsXJwBfBsD7ebMRdawbDxC2814g==
@@ -1436,12 +1436,13 @@ mongodb@~7.2:
     mongodb-connection-string-url "^7.0.0"
 
 mongoose@*:
-  version "9.6.1"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-9.6.1.tgz#9f80798fdd7aec4d0bbf335c469b84c2dcb3f9a6"
-  integrity sha512-3T8/b0plM3ZJPW3WjlzVMIGJEYYTjgDPQ05Qzru3xu3/wOPSFKWYxdwUF2dl8h3NG5dVkzIuOkZdLacnlLf/sA==
+  version "9.8.0"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-9.8.0.tgz#c8e6c217a82284042a01fb1880273edc84571e80"
+  integrity sha512-PDGx3XACxrBQyWf4YT+5s1Xsx19x84UWGlRVIza4i9RG6qKjGcoG7odotT6uquR6YoaDMTZ6ZZc/jMXLrNPyyA==
   dependencies:
+    "@standard-schema/spec" "^1.1.0"
     kareem "3.3.0"
-    mongodb "~7.2"
+    mongodb "~7.5"
     mpath "0.9.0"
     mquery "6.0.0"
     ms "2.1.3"
