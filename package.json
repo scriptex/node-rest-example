@@ -36,7 +36,7 @@
 		"expect": "30.5.2",
 		"mocha": "12.0.3",
 		"nodemon": "3.1.14",
-		"supertest": "7.3.1",
+		"supertest": "7.3.2",
 		"ts-node": "10.9.2",
 		"typescript": "5.9.3"
 	},
@@ -45,7 +45,7 @@
 		"@types/mongodb": "4.0.7",
 		"@types/mongoose": "5.11.97",
 		"body-parser": "2.4.0",
-		"concurrently": "10.0.6",
+		"concurrently": "10.0.7",
 		"express": "5.3.0",
 		"lodash": "4.18.1",
 		"mongodb": "7.8.0",
